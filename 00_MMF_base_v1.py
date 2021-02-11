@@ -55,8 +55,6 @@ while name != "xxx" and count < MAX_TICKETS:
 if count == MAX_TICKETS:
     print("You have sold all the available tickets")
 
-
-
     # get age (between 12 and 130)
 
     # calculate ticket price

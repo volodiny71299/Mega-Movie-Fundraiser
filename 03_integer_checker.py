@@ -10,7 +10,7 @@ def num_check(question, low, high):
                 valid = True
                 return response
             else:
-                print("Please enter a number between {} and {}\n".format(low, high))
+                print("Please enter a number between {} and {}".format(low, high))
 
         except ValueError:
             print("Invalid input")
