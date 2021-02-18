@@ -67,8 +67,6 @@ while name != "xxx" and count < MAX_TICKETS:
         print("You have sold {} tickets\nThere are {} places still available".format(count, MAX_TICKETS - count))
         break
 
-    count += 1
-
     # get age between 12 and 130
     age = num_check("Age: ")
 
@@ -76,10 +74,14 @@ while name != "xxx" and count < MAX_TICKETS:
     if age < 12:
         print("Sorry you are too young to view this movie")
         continue
+
     elif age > 130:
-        print("You are too old :|")
+        print("You are too old")
         continue
 
+    count += 1
+
+# prints that all tickets are sold
 if count == MAX_TICKETS:
     print("You have sold all the available tickets")
 
