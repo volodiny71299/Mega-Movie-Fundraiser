@@ -4,15 +4,21 @@
 
 
 # number checker
-def num_check(question):
+def num_check(question, low, high):
     valid = False
     while not valid:
         try:
             response = int(input(question))
-            if response <= 0:
-                print("error")
-            else:
+            if low <= response <= high:
+                valid = True
                 return response
+
+            # Tells user if they are too old or too young for the movie
+            else:
+                if response > high:
+                    print("Age entered is too high")
+                else:
+                    print("You are too young for this movie")
 
         except ValueError:
             print("Invalid input")
@@ -52,7 +58,7 @@ while name != "xxx" and count < MAX_TICKETS:
 
     # tells user how many seats are left
     if count < 4:
-        print("\nYou have {} seats left".format(MAX_TICKETS - count))
+        print("You have {} seats left".format(MAX_TICKETS - count))
 
     else:
         print("*** you have one seat left ***")
@@ -61,24 +67,14 @@ while name != "xxx" and count < MAX_TICKETS:
 
     # get name (can't be blank)
     name = not_blank("Name: ")
+    print()
 
-    # end loop if the exit code is entered
     if name == "xxx":
         print("You have sold {} tickets\nThere are {} places still available".format(count, MAX_TICKETS - count))
-        break
 
     count += 1
 
-    # get age between 12 and 130
-    age = num_check("Age: ")
-
-    # check that age is valid
-    if age < 12:
-        print("Sorry you are too young to view this movie")
-        continue
-    elif age > 130:
-        print("You are too old :|")
-        continue
+    age = num_check("Age: ", 12, 130)
 
 if count == MAX_TICKETS:
     print("You have sold all the available tickets")
