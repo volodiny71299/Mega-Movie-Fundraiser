@@ -106,10 +106,6 @@ else:
     print("You have sold {} tickets.\n"
           "There are {} places still available".format(ticket_count, MAX_TICKETS - ticket_count))
 
-    # get age (between 12 and 130)
-
-    # calculate ticket price
-
     # loop to ask for snacks
 
     # calculate snack price
