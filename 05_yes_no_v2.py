@@ -1,7 +1,7 @@
+
+
 # string checking functions, takes in
 # question and list of valid responses
-
-
 def string_checker(question, to_check):
 
     valid = False
@@ -25,5 +25,5 @@ def string_checker(question, to_check):
 
 for item in range(0, 6):
     want_snacks = string_checker("Do you want snacks? ", ["yes", "no"])
-    print("Answer ok, you said: ", want_snacks)
+    print("You answered: ", want_snacks)
     print()
