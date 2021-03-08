@@ -22,3 +22,19 @@ for item in range(0, 3):
     for var_list in valid_snacks:
 
         # if the snack is in one
+        if desired_snack in var_list:
+
+            # get full name of snack and put it in title case so it looks nice when outputted
+            snack = var_list[0].title()
+            snack_ok = "yes"
+            break
+
+        # if the chosen snack is not valid, set snack_ok to 'no'
+        else:
+            snack_ok = "no"
+
+    # if the snack is not OK - ask question again
+    if snack_ok == "yes":
+        print("Snack choice: ", snack)
+    else:
+        print("Invalid choice")
