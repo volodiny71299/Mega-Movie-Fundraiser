@@ -1,3 +1,4 @@
+import re
 
 
 # function goes here
@@ -22,6 +23,9 @@ def string_check(choice, options):
         return chosen
     else:
         return "invalid choice"
+
+# regular expression to find if item starts with a number
+number_regex = "^[1-9]"
 
 # Valid snack holds list of all snacks
 # Each item in valid snacks is a list with valid options for each snack <full name, letter code (a - e)
@@ -50,6 +54,7 @@ while check_snack == "invalid choice":
 
 # if they say yes, ask what snacks they want (and add to our snack_order list)
 if check_snack == "Yes":
+
     desired_snack = ""
     while desired_snack != "xxx":
         # ask user for desired snack and put it in lowercase
@@ -57,6 +62,31 @@ if check_snack == "Yes":
 
         if desired_snack == "xxx":
             break
+
+        # if item has a number, separate it into two (number/item)
+        if re.match(number_regex, desired_snack):
+            amount = int(desired_snack[0])
+            desired_snack = desired_snack[1:]
+
+        else:
+            amount = 1
+            desired_snack = desired_snack
+
+        # removies white space around snack
+        desired_snack = desired_snack.strip()
+
+        # check if snack is valid
+        snack_choice = string_check(desired_snack, valid_snacks)
+
+        # check snack amount is valid (less than 5)
+        if amount >= 5:
+            print("Sorry - we have a four snack maximum")
+            snack_choice = "invalid choice"
+
+        # add snack AND amount to list...
+        amount_snack = "{} {}".format(amount, snack_choice)
+
+        # check
 
         # check if snack is valid
         snack_choice = string_check(desired_snack, valid_snacks)

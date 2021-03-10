@@ -35,8 +35,8 @@
       <file leaf-file-name="05_yes_no.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05_yes_no.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+            <state relative-caret-position="255">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -55,19 +55,41 @@
       <file leaf-file-name="06_string_check.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06_string_check.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="655">
               <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="06_string_check_v2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="06_string_check_v2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06_string_check_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+            <state relative-caret-position="520">
+              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="06_string_check_v3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/06_string_check_v3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07_string_analyser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07_string_analyser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+              <folding>
+                <marker date="1615340310435" expanded="true" signature="455:503" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,12 +122,14 @@
         <option value="$PROJECT_DIR$/05_yes_no_v2.py" />
         <option value="$PROJECT_DIR$/06_string_check.py" />
         <option value="$PROJECT_DIR$/06_string_check_v2.py" />
+        <option value="$PROJECT_DIR$/07_string_analyser.py" />
+        <option value="$PROJECT_DIR$/06_string_check_v3.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="697" />
-    <option name="width" value="1230" />
+    <option name="x" value="757" />
+    <option name="width" value="1170" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -180,24 +204,7 @@
       <recent name="C:\Users\volodiny71299\OneDrive - Massey High School\Old School Files\Documents\COM201\Mega-Movie-Fundraiser" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.06_string_check_v2">
-    <configuration default="false" name="00_MMF_base_v1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mega-Movie-Fundraiser" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/00_MMF_base_v1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.07_string_analyser">
     <configuration default="false" name="05_yes_no" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -262,6 +269,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Mega-Movie-Fundraiser" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/06_string_check_v2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="07_string_analyser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Mega-Movie-Fundraiser" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07_string_analyser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -401,19 +425,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.00_MMF_base_v1" />
-      <item index="1" class="java.lang.String" itemvalue="Python.05_yes_no" />
-      <item index="2" class="java.lang.String" itemvalue="Python.05_yes_no_v2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.06_string_check" />
-      <item index="4" class="java.lang.String" itemvalue="Python.06_string_check_v2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.05_yes_no" />
+      <item index="1" class="java.lang.String" itemvalue="Python.05_yes_no_v2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.06_string_check" />
+      <item index="3" class="java.lang.String" itemvalue="Python.06_string_check_v2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.07_string_analyser" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.06_string_check_v2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.06_string_check" />
-        <item index="2" class="java.lang.String" itemvalue="Python.05_yes_no_v2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.05_yes_no" />
-        <item index="4" class="java.lang.String" itemvalue="Python.00_MMF_base_v1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.07_string_analyser" />
+        <item index="1" class="java.lang.String" itemvalue="Python.06_string_check_v2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.06_string_check" />
+        <item index="3" class="java.lang.String" itemvalue="Python.05_yes_no_v2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.05_yes_no" />
       </list>
     </recent_temporary>
   </component>
@@ -431,15 +455,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="697" y="0" width="1230" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="757" y="0" width="1170" height="1047" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22981878" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21923743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2998933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3543223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -471,23 +495,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/00_MMF_base_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-          <folding>
-            <element signature="e#425#748#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/00_MMF_base_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03_integer_checker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -824,10 +831,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06_string_check.py">
+    <entry file="file://$PROJECT_DIR$/05_yes_no.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -840,18 +847,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05_yes_no.py">
+    <entry file="file://$PROJECT_DIR$/06_string_check.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="655">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_string_analyser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <marker date="1615340310435" expanded="true" signature="455:503" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/06_string_check_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        <state relative-caret-position="520">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06_string_check_v3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding />
         </state>
       </provider>
