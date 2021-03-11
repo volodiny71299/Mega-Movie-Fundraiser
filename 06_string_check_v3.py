@@ -36,6 +36,7 @@ valid_snacks = [
     ["M&M's", "m&m's", "mms", "b"],
     ["pita chips", "chips", "pc", "pita", "c"],
     ["water", "w", "d"],
+    ["orange juice", "OJ", "oj", "e"],
 ]
 
 yes_no = [
@@ -63,9 +64,9 @@ if check_snack == "Yes":
         # ask user for desired snack and put it in lowercase
         desired_snack = input("Snack: ").lower()
 
-        check_snack = string_check(desired_snack, valid_snacks)
-        if check_snack == "invalid choice":
-            print("please choose from, {}".format(valid_snacks))
+        # check_snack = string_check(desired_snack, valid_snacks)
+        # if check_snack == "invalid choice":
+        #     print("please choose a valid snack")
 
         if desired_snack == "xxx":
             break
@@ -93,9 +94,13 @@ if check_snack == "Yes":
         # add snack AND amount to list...
         amount_snack = "{} {}".format(amount, snack_choice)
 
+        check_snack = string_check(desired_snack, valid_snacks)
+        if check_snack == "invalid choice":
+            print("please choose a valid snack")
+
         # check that snack is not the exit code before adding
         if snack_choice != "xxx" and snack_choice != "invalid choice":
-            snack_order.append(snack_choice)
+            snack_order.append(amount_snack)
 
 # show snack orders
 print()
