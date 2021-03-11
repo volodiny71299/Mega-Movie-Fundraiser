@@ -6,7 +6,7 @@ def string_check(choice, options):
 
     for var_list in options:
 
-        #if the snack is in one of the lists, return the full
+        # if the snack is in one of the lists, return the full
         if choice in var_list:
 
             # get full name of snack and put it in title case so it looks nice when outputted
@@ -52,6 +52,9 @@ while check_snack == "invalid choice":
     want_snack = input("Do you want to order snacks? ").lower()
     check_snack = string_check(want_snack, yes_no)
 
+    if check_snack == "invalid choice":
+        print("Please say yes / no")
+
 # if they say yes, ask what snacks they want (and add to our snack_order list)
 if check_snack == "Yes":
 
@@ -59,6 +62,10 @@ if check_snack == "Yes":
     while desired_snack != "xxx":
         # ask user for desired snack and put it in lowercase
         desired_snack = input("Snack: ").lower()
+
+        check_snack = string_check(desired_snack, valid_snacks)
+        if check_snack == "invalid choice":
+            print("please choose from, {}".format(valid_snacks))
 
         if desired_snack == "xxx":
             break
@@ -72,7 +79,7 @@ if check_snack == "Yes":
             amount = 1
             desired_snack = desired_snack
 
-        # removies white space around snack
+        # removes white space around snack
         desired_snack = desired_snack.strip()
 
         # check if snack is valid
@@ -85,14 +92,6 @@ if check_snack == "Yes":
 
         # add snack AND amount to list...
         amount_snack = "{} {}".format(amount, snack_choice)
-
-        # check
-
-        # check if snack is valid
-        snack_choice = string_check(desired_snack, valid_snacks)
-        print("snack choice: ",snack_choice)
-
-        # add snack to list
 
         # check that snack is not the exit code before adding
         if snack_choice != "xxx" and snack_choice != "invalid choice":
