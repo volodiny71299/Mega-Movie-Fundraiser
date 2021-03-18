@@ -41,7 +41,7 @@ def get_snack():
         ["pita chips", "chips", "pc", "pita", "c"],
         ["water", "w", "d"],
         ["orange juice", "OJ", "oj", "juice", "orange", "o", "e"],
-]
+    ]
 
     # holds snack order for a single user
     snack_order = []
