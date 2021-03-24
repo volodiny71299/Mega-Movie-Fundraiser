@@ -87,6 +87,27 @@ movie_data_dict = {
     'Ticket': all_tickets
 }
 
+
+def string_check(choice, options):
+
+    is_valid = ""
+    chosen = ""
+
+    for var_list in options:
+
+        # if the snack is in one of the lists, return the full
+        if chosen in var_list:
+
+            # get full name of snack and put it in title case so it looks nice when ouputted
+            chosen = var_list[0].title()
+            is_valid = "yes"
+            break
+
+        # if the chosen option is not valid, set is_valid to no
+        else:
+            is_valid = "no"
+
+
 # ask user if they have used the program before and show instructions
 
 # loop to get ticket details
