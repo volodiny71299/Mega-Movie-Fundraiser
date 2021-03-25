@@ -42,6 +42,8 @@ while name != "xxx":
     while how_pay == "invalid choice":
         how_pay = input("Please choose a payment method (cash / credit)? ").lower()
         how_pay = string_check(how_pay, pay_method)
+        if how_pay == "invalid choice":
+            print("Please try again")
 
     # ask for subtotal (for testing purposes)
     subtotal = float(input("Sub total? $"))
