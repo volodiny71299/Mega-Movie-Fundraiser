@@ -306,8 +306,7 @@ movie_frame["Sub Total"] = \
     movie_frame['M&Ms']*price_dict['M&Ms'] + \
     movie_frame['Orange Juice']*price_dict['Orange Juice']
 
-movie_frame["Surcharge"] = \
-    movie_frame["Sub Total"] * movie_frame["Surcharge_Multiplier"]
+movie_frame["Surcharge"] = movie_frame["Sub Total"] * movie_frame["Surcharge_Multiplier"]
 
 movie_frame["Total"] = movie_frame["Sub Total"] + \
     movie_frame['Surcharge']
