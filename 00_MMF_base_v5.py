@@ -106,10 +106,10 @@ def get_snack():
     # and possible abbreviations eto>
 
     valid_snacks = [
-        ["popcorn", "p", "corn", "a"],
-        ["M&Ms", "m&ms", ["M&M's"], "mms", "b"],
+        ["popcorn", "p", "pop", "corn", "a"],
+        ["M&Ms", "m&ms", ["M&M's"], "mms", "mm", "m", "b"],
         ["pita chips", "chips", "pc", "pita", "c"],
-        ["water", "w", "d"],
+        ["water", "w", "h2o", "d"],
         ["orange juice", "OJ", "oj", "juice", "orange", "o", "e"],
     ]
 
@@ -117,7 +117,7 @@ def get_snack():
     snack_order = []
 
     desired_snack = ""
-    while desired_snack != "xxx":
+    while desired_snack != "xxx" or desired_snack != "n":
 
         snack_row = []
 
@@ -194,7 +194,8 @@ orange_juice = []
 snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 
 # List to store summary data...
-summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water", "Orange Juice", "Snack Profit", "Ticket Price", "Total Profit"]
+summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water", "Orange Juice",
+                    "Snack Profit", "Ticket Price", "Total Profit"]
 summary_data = []
 
 # store surcharge multiplier
@@ -214,7 +215,7 @@ movie_data_dict = {
 
 summary_data_dict = {
     'Item': summary_headings,
-    'Amount': summary_data,
+    'Amount': summary_data
 }
 
 # cost of each snack
@@ -256,21 +257,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_names.append(name)
     all_tickets.append(ticket_price)
 
-    # ask user if they want a snack
-    check_snack = "invalid choice"
-    while check_snack == "invalid choice":
-        want_snack = input("Do you want to order snacks? ").lower()
-        check_snack = string_check(want_snack, yes_no)
-
-        if check_snack == "invalid choice":
-            print("Please say yes / no")
-
-    # if they say yes, ask what snacks they want (and add to our snack_order list)
-    if check_snack == "Yes":
-        snack_order = get_snack()
-
-    else:
-        snack_order = []
+    # get snack
+    snack_order = get_snack()
 
     # assume no snacks have been bought
     for item in snack_lists:
@@ -316,10 +304,16 @@ movie_frame["Sub Total"] = \
     movie_frame['M&Ms']*price_dict['M&Ms'] + \
     movie_frame['Orange Juice']*price_dict['Orange Juice']
 
+movie_frame["Sub Total"] = \
+    movie_frame['Ticket'] + \
+    movie_frame['Snacks']
+
 movie_frame["Surcharge"] = movie_frame["Sub Total"] * movie_frame["Surcharge_Multiplier"]
 
 movie_frame["Total"] = movie_frame["Sub Total"] + \
     movie_frame['Surcharge']
+
+movie_frame
 
 # shorten column names
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips', 'Surcharge_Multiplier': 'SM'})
@@ -346,7 +340,7 @@ summary_data.append(total_profit)
 
 # Create summary frame
 summary_frame = pandas.DataFrame(summary_data_dict)
-
+summary_frame = summary_frame.set_index('Item')
 
 # set up columns to be printed
 pandas.set_option('display.max_columns', None)
@@ -354,16 +348,16 @@ pandas.set_option('display.max_columns', None)
 # Display numbers to 2 dp
 pandas.set_option('precision', 2)
 
-print_all = input("Print all columns?? (y) for yes ")
-if print_all == "y" or print_all == "Y":
-    print()
-    print(movie_frame)
-
-else:
-    print()
-    print(movie_frame[['Ticket', 'Sub Total', 'Surcharge', 'Total']])
+print()
+print("*** Ticket / Snack Information ***")
+print("Note: for full details, please see the excel file called ____")
+print()
+print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 
 print()
+print("*** Snack / Profit Summary ***")
+print()
+print(summary_frame)
 
 # calculate ticket profit...
 ticket_profit = ticket_sales - (5*ticket_count)
@@ -374,7 +368,7 @@ if ticket_count == MAX_TICKETS:
     print("You have sold all the available tickets!")
 
 elif ticket_count == 1:
-    print("You have sold 1 ticket\nThere are still 4 seats still available".format(ticket_count))
+    print("You have sold 1 ticket\nThere are still 4 seats still available")
 
 elif MAX_TICKETS - ticket_count == 1:
     print("You have sold {} tickets\nThere is still {} seat available".format(ticket_count, MAX_TICKETS-ticket_count))
