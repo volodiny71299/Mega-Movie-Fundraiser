@@ -296,8 +296,7 @@ movie_frame = movie_frame.set_index('Name')
 # create column called 'Sub Total'
 # fill it price for snacks and ticket
 
-movie_frame["Sub Total"] = \
-    movie_frame['Ticket'] + \
+movie_frame["Snacks"] = \
     movie_frame['Popcorn']*price_dict['Popcorn'] + \
     movie_frame['Water']*price_dict['Water'] + \
     movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
@@ -313,7 +312,7 @@ movie_frame["Surcharge"] = movie_frame["Sub Total"] * movie_frame["Surcharge_Mul
 movie_frame["Total"] = movie_frame["Sub Total"] + \
     movie_frame['Surcharge']
 
-movie_frame
+# movie_frame
 
 # shorten column names
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips', 'Surcharge_Multiplier': 'SM'})
@@ -334,7 +333,7 @@ summary_data.append(snack_profit)
 ticket_profit = ticket_sales - (5 * ticket_count)
 summary_data.append(ticket_profit)
 
-# work out toal profit and add to list
+# work out total profit and add to list
 total_profit = snack_profit + ticket_profit
 summary_data.append(total_profit)
 
@@ -350,18 +349,24 @@ pandas.set_option('precision', 2)
 
 print()
 print("*** Ticket / Snack Information ***")
-print("Note: for full details, please see the excel file called ____")
+print("Note: for full details, please see the excel file called 'Ticket_Summary'")
 print()
 print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 
 print()
+
 print("*** Snack / Profit Summary ***")
 print()
 print(summary_frame)
 
+print()
+
 # calculate ticket profit...
 ticket_profit = ticket_sales - (5*ticket_count)
 print("Ticket profit: ${:.2f}".format(ticket_profit))
+print("Total profit: ${:.2f}".format(total_profit))
+
+print()
 
 # tell user if they have unsold tickets...
 if ticket_count == MAX_TICKETS:
