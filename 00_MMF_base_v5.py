@@ -195,7 +195,10 @@ snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 
 # List to store summary data...
 summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water", "Orange Juice",
-                    "Snack Profit", "Ticket Price", "Total Profit"]
+                    "Snack Profit", "Ticket Profit", "Total Profit"]
+
+# summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water", "Orange Juice"]
+
 summary_data = []
 
 # store surcharge multiplier
@@ -323,6 +326,8 @@ for item in snack_lists:
     # sum items in each snack list
     summary_data.append(sum(item))
 
+pandas.set_option('precision', 2)
+
 # get snack profit
 # get snack total from pandas
 snack_total = movie_frame['Snacks'].sum()
@@ -363,6 +368,7 @@ print()
 
 # calculate ticket profit...
 ticket_profit = ticket_sales - (5*ticket_count)
+print("Snack Profit: ${:.2f}".format(snack_profit))
 print("Ticket profit: ${:.2f}".format(ticket_profit))
 print("Total profit: ${:.2f}".format(total_profit))
 
