@@ -339,21 +339,29 @@ for item in snack_lists:
     # sum items in each snack list
     summary_data.append(sum(item))
 
-pandas.set_option('precision', 2)
 
 # get snack profit
 # get snack total from pandas
 snack_total = movie_frame['Snacks'].sum()
 snack_profit = snack_total * 0.2
-profit_data.append(snack_profit)
 
 # get ticket profit and add to list
 ticket_profit = ticket_sales - (5 * ticket_count)
-profit_data.append(ticket_profit)
 
 # work out total profit and add to list
 total_profit = snack_profit + ticket_profit
+
+"""
+profit_data.append(snack_profit)
+profit_data.append(ticket_profit)
 profit_data.append(total_profit)
+"""
+
+dollar_amount = [snack_profit, ticket_profit, total_profit]
+for item in dollar_amount:
+    item = "${:.2f}".format(item)
+    profit_data.append(item)
+
 
 # Create summary frame
 summary_frame = pandas.DataFrame(summary_data_dict)
@@ -366,8 +374,18 @@ profit_frame = profit_frame.set_index('Profit')
 # set up columns to be printed
 pandas.set_option('display.max_columns', None)
 
-# Display numbers to 2 dp
-pandas.set_option('precision', 2)
+# *** Pre Printing / Export ***
+# Format currenct Values so they have $'s
+
+# ticket details formatting (uses currency function)
+add_dollars = ['Ticket', 'Snacks', 'Surcharge', 'Total', 'Sub Total']
+for item in add_dollars:
+    movie_frame[item] = movie_frame[item].apply(currency)
+
+# write each frame to a separate cvs files
+movie_frame.to_csv("ticket_details.csv")
+profit_frame.to_csv("profit_summary.csv")
+
 
 print()
 print("*** Ticket / Snack Information ***")
