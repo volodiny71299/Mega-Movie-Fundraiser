@@ -197,8 +197,6 @@ orange_juice = []
 snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 
 # List to store summary data...
-# summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water", "Orange Juice",
-#                     "Snack Profit", "Ticket Profit", "Total Profit"]
 
 summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water", "Orange Juice"]
 
@@ -382,8 +380,9 @@ add_dollars = ['Ticket', 'Snacks', 'Surcharge', 'Total', 'Sub Total']
 for item in add_dollars:
     movie_frame[item] = movie_frame[item].apply(currency)
 
-# write each frame to a separate cvs files
+# write each frame to a separate csv files
 movie_frame.to_csv("ticket_details.csv")
+summary_frame.to_csv("snack_details.csv")
 profit_frame.to_csv("profit_summary.csv")
 
 
