@@ -4,14 +4,14 @@ import pandas
 # functions go here
 
 
-# number checker
+# number checker, checks users enter a valid integer that is more than zero
 def num_check(question):
     valid = False
     while not valid:
         try:
             response = int(input(question))
             if response <= 0:
-                print("error")
+                print("Invalid age, try again")
             else:
                 return response
 
@@ -35,7 +35,7 @@ def not_blank(question):
             print("sorry - this can't be blank, please enter your name")
 
 
-# getting ticket
+# Gets ticket price based on age
 def get_ticket_price():
 
     # get age (between 12 and 130)
@@ -46,8 +46,8 @@ def get_ticket_price():
         print("Sorry you are too young for this movie")
         return "invalid ticket price"
     elif age > 130:
-        print("You are too old!")
-        return "invalid choice"
+        print("This age does not look real")
+        return "invalid ticket price"
 
     if age < 16:
         ticket_price = 7.5
@@ -59,7 +59,8 @@ def get_ticket_price():
     return ticket_price
 
 
-# Ticket limits
+# Ticket limits, ensures users don't sell more tickets than seats
+# warns users when one seat is left
 def check_tickets(tickets_sold, ticket_limit):
     # tells user how many seats are left
     if tickets_sold < ticket_limit - 1:
@@ -71,7 +72,8 @@ def check_tickets(tickets_sold, ticket_limit):
         return ""
 
 
-# string checker
+# string checker, checks user input is valid by comparing input with options in a list
+# used for yes / no questions and also to check valid snacks have been chosen
 def string_check(choice, options):
 
     for var_list in options:
@@ -95,7 +97,7 @@ def string_check(choice, options):
         return "invalid choice"
 
 
-# get snacks
+# get snacks, asks users for snacks and checks amount is valid (integer less than 5, more than 0)
 def get_snack():
 
     # regular expression to find if item starts with a number
@@ -117,14 +119,14 @@ def get_snack():
     snack_order = []
 
     desired_snack = ""
-    while desired_snack != "xxx" or desired_snack != "n":
+    while desired_snack != "xxx" or desired_snack != "no":
 
         snack_row = []
 
         # ask user for desired snack and put it in lowercase
         desired_snack = input("Snack: ").lower()
 
-        if desired_snack == "xxx":
+        if desired_snack == "xxx" or desired_snack == "no":
             return snack_order
 
         # if item has a number, separate it into two (number/item)
@@ -140,7 +142,6 @@ def get_snack():
         desired_snack = desired_snack.strip()
 
         # check if snack is valid
-        # snack_choice = string_check(desired_snack, valid_snacks)
 
         snack_choice = string_check(desired_snack, valid_snacks)
         if snack_choice == "invalid choice":
@@ -155,16 +156,19 @@ def get_snack():
 
         snack_row.append(amount)
         snack_row.append(snack_choice)
+        print(snack_row)
 
         # check that snack is not the exit code before adding
         if snack_choice != "xxx" and snack_choice != "invalid choice":
             snack_order.append(snack_row)
 
 
+# formats numbers to currency
 def currency(x):
     return "${:.2f}".format(x)
 
 
+# outputs instructions if users have not used the program before
 def instructions(option):
     show_help = "invalid choice"
     while show_help == "invalid choice":
@@ -369,11 +373,6 @@ ticket_profit = ticket_sales - (5 * ticket_count)
 # work out total profit and add to list
 total_profit = snack_profit + ticket_profit
 
-"""
-profit_data.append(snack_profit)
-profit_data.append(ticket_profit)
-profit_data.append(total_profit)
-"""
 
 dollar_amount = [snack_profit, ticket_profit, total_profit]
 for item in dollar_amount:
