@@ -16,7 +16,7 @@ def num_check(question):
                 return response
 
         except ValueError:
-            print("Invalid input")
+            print("Please try using whole numbers")
 
 
 # checks that ticket name is not blank
@@ -43,10 +43,10 @@ def get_ticket_price():
 
     # check that age is valid
     if age < 12:
-        print("Sorry you are too young for this movie")
+        print("You have to be 12 or older to view the movie")
         return "invalid ticket price"
     elif age > 130:
-        print("This age does not look real")
+        print("This age does not look real, valid ages are 12 - 130")
         return "invalid ticket price"
 
     if age < 16:
@@ -156,7 +156,6 @@ def get_snack():
 
         snack_row.append(amount)
         snack_row.append(snack_choice)
-        print(snack_row)
 
         # check that snack is not the exit code before adding
         if snack_choice != "xxx" and snack_choice != "invalid choice":
@@ -172,8 +171,10 @@ def currency(x):
 def instructions(option):
     show_help = "invalid choice"
     while show_help == "invalid choice":
-        show_help = input("Would you like to read the instructions? ")
+        show_help = input("Would you like to read the instructions? ").lower()
         show_help = string_check(show_help, option)
+        if show_help == "invalid choice":
+            print("Please reply with y/n")
 
     if show_help == "Yes":
         print()
@@ -295,6 +296,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     # get snack
     snack_order = get_snack()
 
+    max_amount = 4
+
     # assume no snacks have been bought
     for item in snack_lists:
         item.append(0)
@@ -304,15 +307,16 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
             to_find = (item[1])
             amount = (item[0])
             add_list = movie_data_dict[to_find]
-            add_list[-1] = amount
 
-    # get payment method (ie: work out if surcharge is needed)
+            add_list[-1] += amount
+
+     # get payment method (ie: work out if surcharge is needed)
     how_pay = "invalid choice"
     while how_pay == "invalid choice":
         how_pay = input("Please choose a payment method (cash / credit)? ").lower()
         how_pay = string_check(how_pay, pay_method)
         if how_pay == "invalid choice":
-            print("Please try again")
+            print("Please choose 'cash' or 'credit'")
 
     if how_pay == "Credit":
         surcharge_multiplier = 0.05
